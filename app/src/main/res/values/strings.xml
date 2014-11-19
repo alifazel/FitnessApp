@@ -4,6 +4,11 @@
     <string name="app_name">FitnessApp</string>
     <string name="title_activity_fullscreen">FullscreenActivity</string>
     <string name="text_intro_submitButton">Submit</string>
+    <string name="text_welcome">Welcome,</string>
+    <string name="text_enterName">Enter Your Name:</string>
+    <string name="text_introText">Before we can start, I need to know what to be able to call you</string>
+    <string name="title_activity_home_screen">HomeScreen</string>
+    <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
 
 </resources>

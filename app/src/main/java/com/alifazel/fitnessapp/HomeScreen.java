@@ -29,9 +29,6 @@ public class HomeScreen extends Activity {
                     .add(R.id.container, new PlaceholderFragment())
                     .commit();
         }
-
-
-
     }
 
 
