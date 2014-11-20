@@ -176,6 +176,10 @@ public class FullscreenActivity extends Activity {
         } catch (Exception e) {
             e.printStackTrace();
         }
+
+        Intent goToNextActivity = new Intent(getApplicationContext(), HomeScreen.class);
+        startActivity(goToNextActivity);
+
     }
 
 }
