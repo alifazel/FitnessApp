@@ -165,6 +165,17 @@ public class FullscreenActivity extends Activity {
         mHideHandler.postDelayed(mHideRunnable, delayMillis);
     }
 
+    public void saveName(View view) {
 
+        EditText input_name = (EditText) findViewById(R.id.input_name);
+
+        try {
+            FileOutputStream fos = openFileOutput("user_name", Context.MODE_PRIVATE);
+            fos.write(input_name.getText().toString().getBytes());
+            fos.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 
 }
