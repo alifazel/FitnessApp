@@ -8,7 +8,7 @@
     <string name="text_enterName">Enter Your Name:</string>
     <string name="text_introText">Before we can start, I need to know what to be able to call you</string>
     <string name="title_activity_home_screen">HomeScreen</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="text_login">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel porttitor lectus. Integer fermentum at ex non vehicula. Proin malesuada dolor quis dolor accumsan finibus. Phasellus porta tristique dui ut tincidunt. Suspendisse potenti. Cras libero arcu.</string>
     <string name="action_settings">Settings</string>
 
 </resources>
