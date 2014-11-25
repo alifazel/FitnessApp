@@ -5,6 +5,7 @@ import com.alifazel.fitnessapp.util.SystemUiHider;
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Context;
+import android.content.ContextWrapper;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
@@ -12,7 +13,9 @@ import android.os.Handler;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
+import java.io.File;
 import java.io.FileOutputStream;
 
 
@@ -54,9 +57,16 @@ public class FullscreenActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        ifUserFileExists();
+
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_fullscreen);
+
+//        if (ifUserExists) {
+//            Intent goToNextActivity = new Intent(getApplicationContext(), HomeScreen.class);
+//            startActivity(goToNextActivity);
+//        } else {
 
         final View controlsView = findViewById(R.id.fullscreen_content_controls);
         final View contentView = findViewById(R.id.fullscreen_content);
@@ -182,4 +192,27 @@ public class FullscreenActivity extends Activity {
 
     }
 
+    public boolean ifUserFileExists() {
+        ContextWrapper c_file_dir = new ContextWrapper(this);
+        String file_dir = c_file_dir.getFilesDir().getPath();
+        String file_user = "/user_name";
+
+        File userFile = new File(file_dir + file_user);
+
+        if(userFile.exists()) {
+            Intent goToNextActivity = new Intent(getApplicationContext(), HomeScreen.class);
+            startActivity(goToNextActivity);
+            return true;
+        } else
+            return false;
+        }
+
+    public void skipLogin() {
+        Intent goToNextActivity = new Intent(getApplicationContext(), HomeScreen.class);
+        startActivity(goToNextActivity);
+    }
+
+
 }
+
+
